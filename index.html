@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>blog-frontend</title>
+    <link rel="stylesheet" href="/src/style.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+
+    <div class="bg-linear-to-r from-stone-200 to-sky-300 text-white max-h-max">
+
+      <header class="py-4 flex justify-between bg-ctp-latte-text shadow-2xl ">
+        <h1 class="ml-60 font-extrabold text-2xl text-ctp-peach">Armand Amores</h1>
+        <nav class="flex gap-4 text-lg mr-60  ">
+          <a href="#" >Home</a>
+          <a href="#">About</a>
+          <a href="#">Blog</a>
+          <a href="#">Resume</a>
+          <button class="border rounded-4xl p-1 "><i data-lucide="sun"></i></button>
+          <a href="#">Github</a>
+          <a href="#">Linkedin</a>
+          <a href="#">Youtube</a>
+        </nav>
+      </header>
+
+      <main class="mt-20 text-center text-ctp-mantle">
+        <h1 class="text-6xl mb-10 font-extrabold">Things I Think About</h1>
+        <h2 class="text-ctp-latte-text text-2xl">A blog to spill my thoughts on life, goals, technology and more </h2>
+        <div id="tags" class="flex gap-6  justify-center mt-6"></div>
+        <div id="posts" class="mt-10 flex flex-col items-center gap-9"></div>
+      </main>
+
+    </div>
+
+    <script type="module" src="/src/index.js"></script>
+    <script>lucide.createIcons()</script>
+  </body>
+</html>
