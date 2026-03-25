@@ -1,15 +1,15 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>blog-frontend</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="/src/style.css" />
     <script src="https://unpkg.com/lucide@latest"></script>
-  </head>
-  <body>
+</head>
+<body>
 
-    <div class="bg-linear-to-r from-stone-200 to-sky-300 text-white max-h-max pt-16 pb-16">
+    <div class="bg-sky-800 text-white max-h-max pt-16 pb-16">
 
       <header class="fixed top-0 left-0 right-0 py-4  bg-ctp-latte-text/80 shadow-2xl backdrop-blur-sm ">
         <div class=" max-w-6xl mx-auto flex justify-between">
@@ -28,16 +28,18 @@
         </div>
       </header>
 
-      <main class="mt-24 text-center text-ctp-mantle">
-        <h1 class="text-6xl mb-10 font-extrabold">Things I Think About</h1>
-        <h2 class="text-ctp-latte-text text-2xl">A blog to spill my thoughts on life, goals, technology and more </h2>
-        <div id="tags" class="flex gap-6  justify-center mt-6"></div>
-        <div id="posts" class="mt-10 flex flex-col items-center gap-9 "></div>
+      <main class="">
+        
+        <div id="content">
+
+        <a href="/" id="backToBlog"> <- back to blog</a>
+
+        </div>
+
       </main>
 
     </div>
-
-    <script type="module" src="/src/index.js"></script>
+    <script type="module" src="/src/post.js"></script>
     <script>lucide.createIcons()</script>
-  </body>
+</body>
 </html>

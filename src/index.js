@@ -28,16 +28,18 @@ categories.forEach(element => {
 });
 
 
-console.log(posts);
+// console.log(posts);
 
 const postContainer = document.getElementById('posts');
 posts.forEach(element => {
     //construct post and contents
-    const post = document.createElement("div");
+    const post = document.createElement("a");
+    post.href = `post.html?slug=${element.slug}`;
     let postTitle = document.createElement("h2");
     let postDate = document.createElement("span");
     let postExcerpt = document.createElement("p");
     let postCategories = document.createElement("div");
+    let readMore = document.createElement('p');
 
     //Post class
     post.className = "post";
@@ -45,6 +47,7 @@ posts.forEach(element => {
     postTitle.className = "postTitle";
     postCategories.className = "postCategories"
     postDate.className = "postDate";
+    postExcerpt.className ="postExcerpt"
 
     //give elements values
     postTitle.textContent = element.title;
@@ -55,11 +58,16 @@ posts.forEach(element => {
     element.categories.forEach( elem => {
         let tag = document.createElement("div")
         tag.className = "tag";
-        console.log(elem.name);
+        // console.log(elem.name);
         tag.textContent = elem.name
         postCategories.append(tag);
     })
 
+
+    readMore.textContent = 'Read More ->';
+    readMore.className = 'readbtn';
+    postCategories.append(readMore);
+    
 
 
 

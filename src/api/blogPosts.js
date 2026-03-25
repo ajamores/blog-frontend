@@ -13,5 +13,15 @@ const getAllPublishedBLogPosts = async () => {
 
 }
 
+const getPublishedBlogPost = async (slug) => {
+    
+   
+    const res = await fetch(`${BASE_URL}/blog/${slug}`);
 
-export {getAllPublishedBLogPosts};
+    const data = await res.json();
+    return data
+    
+}
+
+
+export {getAllPublishedBLogPosts, getPublishedBlogPost};
