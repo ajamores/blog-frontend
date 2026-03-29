@@ -1,5 +1,6 @@
-import './style.css';
-import { getAllPublishedBLogPosts } from './api/blogPosts.js'
+import '../styles/style.css';
+import { getAllPublishedBLogPosts } from '../api/blogPosts.js'
+
 
 //Fetch all published posts on start
 const postData = await getAllPublishedBLogPosts();
@@ -34,7 +35,7 @@ const postContainer = document.getElementById('posts');
 posts.forEach(element => {
     //construct post and contents
     const post = document.createElement("a");
-    post.href = `post.html?slug=${element.slug}`;
+    post.href = `/post.html?slug=${element.slug}`;
     let postTitle = document.createElement("h2");
     let postDate = document.createElement("span");
     let postExcerpt = document.createElement("p");

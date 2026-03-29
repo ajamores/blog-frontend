@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="../src/styles/post.css" />
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
@@ -32,14 +32,26 @@
         
         <div id="content">
 
-        <a href="/" id="backToBlog"> <- back to blog</a>
+          <a href="/" id="backToBlog" class="flex gap-1 my-5 text-ctp-peach hover:text-white group mb-10 "  >
+            <i data-lucide="arrow-left" class="group-hover:-translate-x-1 transition-transform duration-200 ease-out"></i>
+            <p>back to blog</p>
+          </a>
+
+          <div class="mb-5 flex gap-2 items-center text-stone-300 bg-gray-500 w-max px-2 rounded-2xl">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            <div id="date"></div>
+          </div>
+
+          <div id="title"></div>
+          <div id="excerpt"></div>
+          <div id="categories" class="flex gap-4 my-10"></div>
 
         </div>
 
       </main>
 
     </div>
-    <script type="module" src="/src/post.js"></script>
+    <script type="module" src="/src/pages/post.js"></script>
     <script>lucide.createIcons()</script>
 </body>
 </html>
